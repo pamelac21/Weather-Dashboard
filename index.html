@@ -13,12 +13,34 @@
     <header id="header" class="jumbotron jumbotron-fluid text-container">
         <h1 class="display-2">Weather Dashboard</h1>
     </header>
+    <section class="container" id="content">
+        <div class="row">
 
+            <div id="left-side" class="col-md-3">
+                <form>
+                    <label for="searchBar">Search by City:</label>
+                    <div class="form-row">
+                        <input id="searchBar" class="form-control" name="city" value=""></input>
+                        <button id="searchBtn" class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+    
+                <ul id="searchResults" class="list-group mt-4"></ul>
+                <a id="clear" href="#"></a>    
+            </div>
+    
+            <div id="right-side" class="col-md-9 pt-4">
+                <div id="weather" class="border rounded"></div>
+                <div id="forecast" class="mt-5"></div>
+            </div>
+        </div>
+    </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 <script src="assets\script.js"></script>
+
 </body>
 </html>

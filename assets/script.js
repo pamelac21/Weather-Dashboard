@@ -1,6 +1,18 @@
 const APIkey = "77d964daadf18f4da0191f491935d9c4"
 let city = ""
 
+
+
+
+
+//WEATHER from api
+let weather = () => {
+    let city = $("#searchBar").val()
+
+
+
+
+
 //city fetch for coord
 let cityUrl = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + APIkey)
 fetch(cityUrl)
@@ -27,3 +39,11 @@ let onecallUrl = ("https://api.openweathermap.org/data/2.5/onecall?lat=" + latit
   .then(async (response) => {
       console.log(response)
   })
+}
+
+//search
+$("#searchBtn").on("click", (event) => {
+    event.preventDefault()
+
+    weather()
+})
