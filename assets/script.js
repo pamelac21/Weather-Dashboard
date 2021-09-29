@@ -21,13 +21,13 @@ let weather = () => {
         .then((response) => response.json())
         .then(async (response) => {
             console.log(response)
-            let latitude = response[0].lat;
-            let longitude = response[0].lon;
+            const latitude = response[0].lat;
+            const longitude = response[0].lon;
             console.log(latitude, longitude)
             // city name
             $('#weather').html('')
             $('#weather').append(`<h2>${response[0].name}</h2>`)
-
+        
 
             let onecallUrl = ("https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&apikey=" + APIkey + "&units=imperial")
             fetch(onecallUrl)
@@ -89,7 +89,7 @@ let weather = () => {
                     cardContent += `</div>`
                     $("#forecast").html(cardContent)
                 })
-        })
+            })   
 }
 
 //localStorage
