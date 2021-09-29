@@ -30,3 +30,25 @@
   width: 15px;
   display: inline-block;
 }
+
+#weather {
+  padding-left: 15px;
+}
+
+.favorable {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+}
+
+.moderate {
+  background-color: orange;
+  border-radius: 5px;
+  color: white;
+}
+
+.severe {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+}

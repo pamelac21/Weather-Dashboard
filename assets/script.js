@@ -53,6 +53,19 @@ let onecallUrl = ("https://api.openweathermap.org/data/2.5/onecall?lat=" + latit
             <li>Wind Speed: ${response.current.wind_speed}mph</li>
             <li id="uvIndex"></li>
         </ul>`)
+
+//uv
+$("#uvIndex").html('')
+let uvResponse = response.current.uvi
+$("#uvIndex").append(`UV Index: ${response.current.uvi}`);
+$("#uvIndex").html(`UV Index: <span id="uvColor"> ${uvResponse}</span>`);
+if (uvResponse >= 0 && uvResponse < 3) {
+  $("#uvColor").attr("class", "favorable");
+} else if (uvResponse >= 3 && uvResponse < 8) {
+  $("#uvColor").attr("class", "moderate");
+} else if (uvResponse >= 8) {
+  $("#uvColor").attr("class", "severe");
+}
   })
 }
 
