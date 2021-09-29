@@ -6,14 +6,13 @@ let currentCity = ''
 let weather = () => {
     let city = $("#searchBar").val()
 
-
 //city fetch for coord
-let cityUrl = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + APIkey)
-fetch(cityUrl)
-.then((response) => response.json())
-.then((response) => {
-    console.log(response)
-    saveCity(city)
+    let cityUrl = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + APIkey)
+    fetch(cityUrl)
+    .then((response) => response.json())
+    .then((response) => {
+        console.log(response)
+        saveCity(city)
 })
 
 //coord fetch
