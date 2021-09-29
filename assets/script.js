@@ -2,16 +2,9 @@ const APIkey = "77d964daadf18f4da0191f491935d9c4"
 let city = ''
 let currentCity = ''
 
-
-
-
-
 //WEATHER from api
 let weather = () => {
     let city = $("#searchBar").val()
-
-
-
 
 
 //city fetch for coord
@@ -146,9 +139,22 @@ let searches = () => {
   
         $("#searchResults").prepend(cityBtns)
     }
+//clear btn
+if (localStorage.length > 0) {
+    $("#clear").html($('<a class="grow btn" id="clear" href="#">clear</a>'));
+  } else {
+    $("#clear").html("");
+  }
 
 }
 }
+
+//clear btn click event
+$("#clear").on("click", () => {
+    localStorage.clear();
+    searches();
+  })
+
 //search
 $("#searchBtn").on("click", (event) => {
     event.preventDefault()
