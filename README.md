@@ -22,7 +22,7 @@ If I want to clear the list of searched cities, a "clear" button is provided und
 
 Clone the repo: https://github.com/pamelac21/Weather-Dashboard.git
 
-![screencapture-file-C-Users-pamel-OneDrive-Desktop-PROJECTS-1WeatherDash-index-html-2021-09-25-17_49_28](https://user-images.githubusercontent.com/87335354/134786865-9034af33-6e3d-4f28-92a7-d9333f39068e.png)
+![ss-app](https://user-images.githubusercontent.com/87335354/135306537-7a209217-26a2-4179-8863-1fc0b9deff3a.png)
 
 Built With: -HTML -CSS -JavaScript -jQuery -Moment.js -Font Awesome -Bootstrap -OpenWeather One Call API
 
