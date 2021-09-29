@@ -16,7 +16,7 @@ let weather = () => {
         })
 
     //coord fetch
-    let coordUrl = ("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + APIkey)
+    let coordUrl = ("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + APIkey)
     fetch(coordUrl)
         .then((response) => response.json())
         .then(async (response) => {
