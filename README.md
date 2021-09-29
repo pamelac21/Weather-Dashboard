@@ -18,7 +18,7 @@ WHEN I click on a city in the search history THEN I am again presented with curr
 
 If I want to clear the list of searched cities, a "clear" button is provided under the list.
 
-[Deployed Site]()
+[Deployed Site](https://pamelac21.github.io/Weather-Dashboard/)
 
 Clone the repo: https://github.com/pamelac21/Weather-Dashboard.git
 
