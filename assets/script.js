@@ -33,7 +33,7 @@ fetch(coordUrl)
 // city name
 $('#weather').html('')
 $('#weather').append(`<h2>${response[0].name}</h2>`)
-})
+
 
 let onecallUrl = ("https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&apikey="+APIkey+"&units=imperial")
   fetch(onecallUrl)
@@ -66,8 +66,35 @@ if (uvResponse >= 0 && uvResponse < 3) {
 } else if (uvResponse >= 8) {
   $("#uvColor").attr("class", "severe");
 }
-  })
+
+//forecast
+$("#forecast").html('')
+let cardContent = (`<h4>5-Day Forecast:</h4>
+<div id="forecast" class="d-inline-flex flex-wrap">`)
+
+    for (let i = 0; i < 5; i++) {
+        let days = response.daily[i]
+        let weekDay = new Date(days.dt * 1000).toLocaleDateString("en", {weekday: "long"})
+        let date = new Date(days.dt * 1000).toLocaleString().split(',')[0]
+        let iconURL = ("https://openweathermap.org/img/w/" + days.weather[0].icon + ".png")
+    
+        cardContent += (`
+    <div class="weather-card card m-2">
+    <ul class="list-unstyled p-2">
+        <li>${weekDay}</li>
+        <li>${date}</li>
+        <li class="weather-icon"><img src="${iconURL}"></li>
+        <li>High: ${days.temp.max}&#8457;</li>
+        <li>Low: ${days.temp.min}&#8457;</li>
+        <li>Wind: ${days.wind_speed} mph</li>
+        <li>Humidity: ${days.humidity}%</li>
+    </ul>
+    </div>`)
 }
+cardContent += `</div>`
+$("#forecast").html(cardContent)
+}) 
+})}
 
 //search
 $("#searchBtn").on("click", (event) => {

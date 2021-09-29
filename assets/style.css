@@ -31,8 +31,30 @@
   display: inline-block;
 }
 
+.list-group-item {
+  color: whitesmoke;
+  background-color: rgb(94, 94, 95);
+  margin-top: 0.25rem;
+}
+
+h4 {
+  padding-left: 15px;
+}
+
+#forecast {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 #weather {
   padding-left: 15px;
+}
+
+.weather-card {
+  width: 9rem;
+  background-color: #050657;
+  color: white;
+  text-align: left;
 }
 
 .favorable {
