@@ -43,6 +43,7 @@ let onecallUrl = ("https://api.openweathermap.org/data/2.5/onecall?lat=" + latit
   .then(async (response) => {
       console.log(response)
 
+searches()
 //current weather
     let icon = ("https://openweathermap.org/img/w/" + response.current.weather[0].icon + ".png")
 
@@ -151,8 +152,17 @@ let searches = () => {
 //search
 $("#searchBtn").on("click", (event) => {
     event.preventDefault()
-
+    currentCity = $("#searchBar").val()
     weather()
+    searches()
+})
+
+//search results area
+$("#searchResults").on("click", (event) => {
+    event.preventDefault()
+    $("#searchBar").val(event.target.textContent)
+    currentCity = $("#searchBar").val()
+    weather(event)
 })
 
 searches()
