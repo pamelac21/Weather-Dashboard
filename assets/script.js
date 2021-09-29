@@ -1,5 +1,5 @@
-console.log('(^_^)/')
 const APIkey = "77d964daadf18f4da0191f491935d9c4"
+let city = ""
 
 //city fetch for coord
 let cityUrl = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + APIkey)

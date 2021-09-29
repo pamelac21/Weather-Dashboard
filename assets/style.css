@@ -1,0 +1,7 @@
+#header {
+    background-image: linear-gradient(to right, #0275d8, #050657);
+    background-size: cover;
+    background-position-y: 40%;
+    color: white;
+    position: relative;
+}
